@@ -56,11 +56,12 @@ const submit = (e) => {
             <div class="col-lg-6">
             <div class="login-form border p-5">
                 <div class="text-center heading">
-                <h2 class="mb-2">Sign In</h2>
-                <p class="lead">No account yet? <Link to="/signup"> Signup now</Link></p>
+                <h2 class="mb-2">Sign Up</h2>
+                <p class="lead">Already have an account? <a href="/login"> Login now</a></p>
                 </div>
     
-                <form action="#"   onSubmit={submit} >
+                <form action="#"   onSubmit={submit} encType="multipart/form-data">
+              
                 <div class="form-group mb-4">
                 <label>Email</label>
                 <input class="form-control" type="text" name='email' placeholder="user@example.com"  onChange={emailchange} value={email}/> 
@@ -69,9 +70,10 @@ const submit = (e) => {
                 <label>Password</label>
                          <input class="form-control" type="password" name='password' placeholder="••••••" onChange={passchange} value={password}/>
                 </div>
+    
                 <div class="row">
                  <div class="col d-flex justify-content-center">
-                      <button class="btn btn-primary" type="submit">{loading === 'pending' ? 'Logging In' : 'Login' }</button>
+                     <button class="btn btn-primary" type="submit">{loading === 'pending' ? 'Logging In' : 'Login' }</button>
                  </div>
       </div>
                 </form>
